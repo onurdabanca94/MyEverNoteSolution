@@ -1,0 +1,32 @@
+﻿@using MyEvernote.Entities
+@model EvernoteUser
+
+@{
+    ViewBag.Title = "Profiliniz";
+}
+
+
+<div class="row pl-5 pt-3">
+    <div class="col-md-12">
+        <p class="display-4 border-bottom">
+            Kullanıcı Hesabı
+        </p>
+    </div>
+</div>
+
+<div class="row p-5">
+
+    <div class="col-md-2">
+        <img src="~/images/@Model.ProfileImageFilename" class="rounded-circle img-thumbnail" width="128" height="128" />
+    </div>
+
+    <div class="col-md-10">
+        <h3 class="display-4 mb-4" style="font-size:2em;">@(Model.Name + " " + Model.Surname)</h3>
+        <p>
+            <b>@Html.DisplayNameFor(model => model.Username) : </b>@Model.Username<br />
+            <b>@Html.DisplayNameFor(model => model.Email) : </b>@Model.Email
+        </p>
+        <p class="mt-4"><a href="#">Daha Fazla... </a></p>
+    </div>
+
+</div>

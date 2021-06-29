@@ -1,0 +1,69 @@
+﻿@using MyEvernote.WebApp
+@model MyEvernote.Entities.Category
+
+@{
+    ViewBag.Title = "Kategori Detay";
+}
+
+<div class="row pl-5 pt-3 mr-0">
+    <div class="col-md-12">
+        <p class="display-4 border-bottom">
+            @ViewBag.Title
+        </p>
+    </div>
+</div>
+
+<div class="row pl-5 mr-0">
+    <div class="col-md-8">
+        <dl class="row">
+            <dt class="col-md-3">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd class="col-md-9">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+            <dt class="col-md-3">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd class="col-md-9">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt class="col-md-3">
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </dt>
+
+            <dd class="col-md-9">
+                @Html.DisplayFor(model => model.CreatedOn)
+            </dd>
+
+            <dt class="col-md-3">
+                @Html.DisplayNameFor(model => model.ModifiedOn)
+            </dt>
+
+            <dd class="col-md-9">
+                @Html.DisplayFor(model => model.ModifiedOn)
+            </dd>
+
+            <dt class="col-md-3">
+                @Html.DisplayNameFor(model => model.ModifiedUsername)
+            </dt>
+
+            <dd class="col-md-9">
+                @Html.DisplayFor(model => model.ModifiedUsername)
+            </dd>
+
+        </dl>
+
+    </div>
+    <div class="col-md-8 col-md-offset-2">
+        <p>
+            @Bootstrap.LinkButton("/Category/Index", "secondary", string.Empty, string.Empty, "arrow-left", "Geri Dön!")
+            @Bootstrap.LinkButton("/Category/Edit/" + Model.Id, "warning", string.Empty, string.Empty, "edit", "Düzenle")
+        </p>
+    </div>
+</div>
+
